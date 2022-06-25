@@ -18,6 +18,7 @@ public class ContactDAO {
         // Query que será inserida no banco de dados
         String sql = "INSERT INTO contacts(nome,idade,email,dataCadastro) VALUES (?,?,?,?)";
 
+
         Connection connection = null;
         PreparedStatement preparedStatement = null;
 

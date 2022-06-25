@@ -4,9 +4,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class Connector {
-    private static final String USER = "DEFINA";
-    private static final String PASS = "DEFINA";
-    private static final String DATABASE_STRING = "jdbc:mysql://HOST:PORTA/BANCO";
+
+    private static final String USER = "b575c075f0eaa9";
+    private static final String PASS = "d413688e";
+    private static final String DATABASE_STRING = "jdbc:mysql://us-cdbr-east-05.cleardb.net:3306/heroku_0bea6e542aeaf76";
 
     public static Connection connectToDatabase() throws Exception {
         // Faz conexão com o driver do jdbc
