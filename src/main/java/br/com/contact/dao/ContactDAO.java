@@ -208,4 +208,33 @@ public class ContactDAO {
         }
     }
 
+    // TESTES
+    public static  void buscarContatoPorNome(String nome) throws Exception{
+        Connection connection = null;
+        PreparedStatement statement = null;
+        ResultSet result = null;
+
+        String sql = "select * from contacts";
+
+        try{
+            connection = Connector.connectToDatabase();
+            statement = connection.prepareStatement(sql);
+
+            result = statement.executeQuery();
+
+            while (result.next()){
+                if (result.getString("nome").contains(nome)){
+                    Contact contact = new Contact(result.getString("nome"),result.getInt("idade"),result.getString("email"),result.getDate("dataCadastro"));
+
+                    System.out.println("Nome: " + contact.getNome()+ " | " + "E-mail: " + contact.getEmail()+ " | " + "Idade: " + contact.getIdade());
+                }
+            }
+
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+    }
+
 }

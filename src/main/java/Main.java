@@ -1,3 +1,5 @@
+import br.com.contact.dao.ContactDAO;
+
 public class Main {
     public static void main(String[] args) throws Exception {
 
@@ -46,5 +48,6 @@ public class Main {
          **/
         // ContactDAO.mostrarAlgumContato(12);
 
+        ContactDAO.buscarContatoPorNome("brabo");
     }
 }
